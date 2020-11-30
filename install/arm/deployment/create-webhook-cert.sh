@@ -48,7 +48,7 @@ done
 
 [ -z ${service} ] && service=lxcfs-admission-webhook-svc
 [ -z ${secret} ] && secret=lxcfs-admission-webhook-certs
-[ -z ${namespace} ] && namespace=lxcfs
+[ -z ${namespace} ] && namespace=default
 
 if [ ! -x "$(command -v openssl)" ]; then
     echo "openssl not found"
