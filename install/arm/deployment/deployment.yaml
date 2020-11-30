@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: lxcfs-admission-webhook
-          image: registry.cn-hangzhou.aliyuncs.com/denverdino/lxcfs-admission-webhook:v1
+          image: registry.cn-hangzhou.aliyuncs.com/chilone/lxcfs-admission-webhook:arm-v2
           imagePullPolicy: IfNotPresent
           args:
             - -tlsCertFile=/etc/webhook/certs/cert.pem

@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: lxcfs
@@ -19,8 +19,8 @@ spec:
         effect: NoSchedule
       containers:
       - name: lxcfs
-        image: registry.cn-hangzhou.aliyuncs.com/denverdino/lxcfs:3.1.2
-        imagePullPolicy: Always
+        image: registry.cn-hangzhou.aliyuncs.com/chilone/lxcfs:arm-v3.1.2
+        imagePullPolicy: IfNotPresent
         securityContext:
           privileged: true
         volumeMounts:
