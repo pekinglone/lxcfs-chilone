@@ -79,7 +79,7 @@ openssl genrsa -out ${tmpdir}/server-key.pem 2048
 openssl req -new -key ${tmpdir}/server-key.pem -subj "/CN=${service}.${namespace}.svc" -out ${tmpdir}/server.csr -config ${tmpdir}/csr.conf
 
 # 得到公钥
-openssl x509 -sha256 -req -in server.csr \
+openssl x509 -sha256 -req -in ${tmpdir}/server.csr \
 -CA /etc/kubernetes/ssl/kube-ca.pem \
 -CAkey /etc/kubernetes/ssl/kube-ca-key.pem \
 -CAcreateserial \
